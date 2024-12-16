@@ -9,5 +9,15 @@
         <module name="Task_3.1-booking-tests" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Task_3.1-booking-test" target="20" />
+      <module name="Task_3.1_v2_bookingtest" target="17" />
+      <module name="Task_3.1_ver2-booking-test" target="17" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Task_3.1_v2_bookingtest" options="--add-exports java.base/jdk.internal.misc=ALL-UNNAMED" />
+    </option>
   </component>
 </project>

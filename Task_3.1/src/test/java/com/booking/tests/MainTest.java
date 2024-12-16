@@ -26,6 +26,8 @@ import com.booking.base.BaseTest;
 import com.booking.pages.BookingPage;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Selenide.$;
+
 public class MainTest extends BaseTest {
     BookingPage bookingPage = new BookingPage();
 
@@ -37,5 +39,9 @@ public class MainTest extends BaseTest {
         bookingPage.verifyCityDisplayed(city);
         bookingPage.selectFiveStars();
         bookingPage.verifyAllHotelsAreFiveStars();
+
+        if ($(".ot-sdk-row").isDisplayed()) {
+            $(".ot-sdk-row .close-button").click(); // Замените на правильный селектор
+        }
     }
 }

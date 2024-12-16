@@ -10,6 +10,8 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 public class BaseTest {
     @BeforeAll
     public static void setUp() {
+
+
         Configuration.browser = "chrome";
         Configuration.browserSize = String.valueOf(true); // Браузер открывается на весь экран
         addListener("AllureSelenide", new AllureSelenide());
