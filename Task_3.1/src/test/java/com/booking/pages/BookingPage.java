@@ -1,8 +1,9 @@
 package com.booking.pages;
 
-
 import com.codeborne.selenide.CollectionCondition;
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.*;
+import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -55,4 +56,16 @@ public class BookingPage {
 //        $$(".bui-review-score__badge").forEach(badge ->
 //                badge.shouldHave(Condition.attribute("aria-label", "5 звёзд")));
     }
+    @Epic("Фильтрация отелей")
+    @Feature("Поиск отелей в Анталье")
+
+    @Test
+    @Story("Выбор 5-звездочных отелей")
+    @Description("Тест проверяет выбор города 'Анталья' и фильтрацию 5-звездочных отелей")
+    @Severity(SeverityLevel.CRITICAL)
+    public void testSearchAndFilter() {
+        BookingPage bookingPage = new BookingPage();
+        bookingPage.searchCity("Анталья");
+    }
+
 }

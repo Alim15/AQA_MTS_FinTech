@@ -28,6 +28,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 
+
 public class MainTest extends BaseTest {
     BookingPage bookingPage = new BookingPage();
 
